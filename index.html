@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant&family=Roboto+Condensed:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
+  <title>Music Player</title>
+  <style>
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+
+    .header {
+      text-align: center;
+      font-size: 32px;
+      color: white;
+      padding: 10px;
+    }
+
+    .header h1 {
+        font-family: 'Cormorant Infant', serif;
+    }
+
+    
+    .header h2{
+        font-family: 'Great Vibes';
+    }
+
+    .container {
+        background-image: url(images/background5.png);
+        background-size: cover;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 160px; /* Add some padding to the top */
+    }
+
+
+    .container-yt {
+        width: 560px;
+        height: 315px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .blur-box {
+      width: flex;
+      backdrop-filter: blur(8px);
+      border-radius: 10px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .blur-box-inside {
+      width: flex;
+      background-color: #85B96E blur(1px);
+      border-radius: 10px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+
+    .logo {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 100px; /* Set the desired width, height will scale proportionally */
+    }
+
+
+    .song-info {
+      display: flex;
+      flex-direction: column;
+      margin: 0px
+    }
+
+    .song-info h1,
+    .song-info h2 {
+      margin: 5px 0;
+      text-align: center;
+      color: azure;
+    }
+
+    .song-info p {
+      margin: 0;
+      text-align: center;
+      color: azure;
+      align-items: center;
+    }
+
+    .control-buttons {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+    }
+
+    .btn {
+      margin-bottom: 10px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: lightgreen;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .youtube-link a {
+      color: lightgreen;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      /* Adjustments for mobile view */
+      .container {
+        justify-content: flex-start;
+        padding: 20px;
+      }
+
+      .blur-box {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+      }
+
+      .song-info {
+        margin: 10px 0;
+      }
+
+      .control-buttons {
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img width="200%" height="200%" src="images/logo_nobg.png" alt="">
+    </div>
+    <div class="blur-box">
+        <div class="header">
+            <h1>SUNDAY</h1>
+            <h2>Worship Set List</h2>
+        </div>
+    <div class="blur-box-inside">
+      <div class="song-info">
+        <h1>ALMIGHTY</h1>
+        <h2>Lakewood Music</h2>
+        <div class="container-yt">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Ci4FqUzugp0?si=47tfIETr9T4WeB9H" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="blur-box">
+        <div class="song-info">
+          <h1>PRAISE</h1>
+          <h2>Maverick City Music</h2>
+          <div class="container-yt">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/3oxpLJuryrc?si=MpM2qphYSqVfm72Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        </div>
+      </div>
+
+
+      <div class="blur-box">
+        <div class="song-info">
+          <h1>SEE A VICTORY</h1>
+          <h2>Maverick City Music</h2>
+          <div class="container-yt">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/YNd-PbVhnvA?si=hfjlPS1wG43gktHG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
