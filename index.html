@@ -18,7 +18,8 @@
 
     @font-face {
       font-family: "MoonTime-Regular";
-      src: url('MoonTime-Regular') format('truetype');
+      src: url('MoonTime-Regular.tff') format('truetype');
+      src: url('MoonTime-Regular.woff') format('woff');
     }
 
     body {
@@ -44,7 +45,7 @@
     }
 
     .container {
-        background-image: url(images/background.png);
+        background-image: url(images/background5.png);
         background-size: cover;
         height: auto;
         display: flex;
@@ -77,21 +78,15 @@
 
     .blur-box-inside {
       width: 100%;
+      font-family: 'BlackerSansDisplay-Thin';
       background-color: rgba(112, 163, 97, 0.7); /* Semi-transparent background color */
-      border-radius: 10px;
       padding: 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      backdrop-filter: blur(8px); /* Apply the backdrop blur effect */
+      backdrop-filter: blur(4px); /* Apply the backdrop blur effect */
     }
-
-    .blur-box-inside {
-      font-family: 'BlackerSansDisplay-Thin';
-    }
-
-
 
     .logo {
         position: absolute;
@@ -171,6 +166,7 @@
     <div class="logo">
       <img width="200%" height="200%" src="images/logo_nobg.png" alt="">
     </div>
+
     <div class="blur-box">
         <div class="header">
             <h1>SUNDAY</h1>
@@ -184,6 +180,7 @@
             <iframe width="560" height="315" src="https://www.youtube.com/embed/Ci4FqUzugp0?si=47tfIETr9T4WeB9H" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
       </div>
+    </div>
 
       <div class="blur-box-inside">
         <div class="song-info">
@@ -206,6 +203,7 @@
         </div>
       </div>
     </div>
+  </div>
   </div>
 </body>
 </html>
