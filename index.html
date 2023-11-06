@@ -7,6 +7,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant&family=Roboto+Condensed:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2f76c5a1ee.js" crossorigin="anonymous"></script>
   <title>Music Player</title>
   <style>
 
@@ -22,6 +26,12 @@
            url('MoonTime-Regular/MoonTime-Regular.woff') format('woff'),
            url('MoonTime-Regular/MoonTime-Regular.otf') format('opentype'),
            url('MoonTime-Regular/MoonTime-Regular.woff2') format('woff2');
+    }
+
+    *{
+      text-align: center;
+      justify-content: center;
+      justify-items: center;
     }
 
     body {
@@ -162,6 +172,26 @@
       .control-buttons {
         margin: 10px 0;
       }
+
+      .footer {
+        width: 100%;
+        text-align: center;
+        padding: 30px 0;
+      }
+
+      .footer h2 {
+        margin-bottom: 25px;
+        margin-top: 20px;
+        font-weight: 1000;
+      }
+
+      .footer .i{
+        font-weight: 500; /* Adjust the font size as needed */
+        margin: 0 10px; /* Add margin between the icons if desired */
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+      }
     }
   </style>
 </head>
@@ -197,7 +227,7 @@
       </div>
     </div>
 
-      <div class="blur-box-inside">
+    <div class="blur-box-inside">
         <div class="song-info">
           <h1>WE HAVE OVERCOME</h1>
           <h2>Israel Houghton</h2>
@@ -205,9 +235,9 @@
             <iframe width="560" height="315" src="https://www.youtube.com/embed/2nOgSrLVtCI?si=s7N2_UKaFkDoFXw7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
         </div>
-      </div>
+    </div>
 
-      <div class="blur-box-inside">
+    <div class="blur-box-inside">
         <div class="song-info">
           <h1>WHEN I LOOK INTO</h1>
           <h1>YOUR HOLLINESS</h1>
@@ -215,18 +245,18 @@
           <div class="container-yt">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/PFX7x52XiT0?si=OhcftWpp_N_5gA_4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
-      </div>
+    </div>
 
-      <div class="blur-box-inside">
+    <div class="blur-box-inside">
         <div class="song-info">
           <h1>HOLY FOREVER</h1>
           <h2>Bethel Music</h2>
           <div class="container-yt">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/MuzuZ7mXfDU?si=Ed9y2KOBHpDfuFqh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
-      </div>
+    </div>
 
-      <div class="blur-box-inside">
+    <div class="blur-box-inside">
         <div class="song-info">
           <h1>COMMUNION SONG :</h1>
           <h1>COMMUNION SONG</h1>
@@ -234,9 +264,9 @@
           <div class="container-yt">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/RfLWA5G8jSI?si=FlfeLluNUNHWSPpD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
-      </div>
+    </div>
 
-      <div class="blur-box-inside">
+    <div class="blur-box-inside">
         <div class="song-info">
           <h1>OFFERING SONG :</h1>
           <h1>GIVE TO THE LORD</h1>
@@ -244,8 +274,11 @@
           <div class="container-yt">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/mQ6UTfQfr_k?si=NHvfmmeyQWwlJnAL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
-      </div>
-    </div>
   </div>
+  <!-- Footer -->
+  <section class="footer">
+    <h2>Follow us on our pages!</h2>
+    <a href="https://www.facebook.com/mnccdubai" class="social-link"><i class="fa fa-facebook fa-2x"></i></a>
+  </section>
 </body>
 </html>
