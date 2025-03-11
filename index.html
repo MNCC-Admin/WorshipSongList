@@ -1,340 +1,135 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MNCC Music Setlist</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant&family=Roboto+Condensed:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/2f76c5a1ee.js" crossorigin="anonymous"></script>
-  <title>MNCC Music Setlist</title>
-  <style>
+    <style>
+        @font-face {
+            font-family: "BlackerSansDisplay-Thin";
+            src: url('BlackerSansDisplay-Thin.ttf') format('truetype'),
+                url('BlackerSansDisplay-Thin.woff') format('woff');
+        }
 
-    @font-face {
-      font-family: "BlackerSansDisplay-Thin";
-      src: url('BlackerSansDisplay-Thin.ttf') format('truetype'),
-           url('BlackerSansDisplay-Thin.woff') format('woff');
-    }
+        @font-face {
+            font-family: "MoonTime-Regular";
+            src: url('MoonTime-Regular/MoonTime-Regular.ttf') format('truetype'),
+                url('MoonTime-Regular/MoonTime-Regular.woff') format('woff'),
+                url('MoonTime-Regular/MoonTime-Regular.otf') format('opentype'),
+                url('MoonTime-Regular/MoonTime-Regular.woff2') format('woff2');
+        }
 
-    @font-face {
-      font-family: "MoonTime-Regular";
-      src: url('MoonTime-Regular/MoonTime-Regular.ttf') format('truetype'),
-           url('MoonTime-Regular/MoonTime-Regular.woff') format('woff'),
-           url('MoonTime-Regular/MoonTime-Regular.otf') format('opentype'),
-           url('MoonTime-Regular/MoonTime-Regular.woff2') format('woff2');
-    }
+        * {
+            text-align: center;
+            justify-content: center;
+            justify-items: center;
+            box-sizing: border-box;
+        }
 
-    *{
-      text-align: center;
-      justify-content: center;
-      justify-items: center;
-    }
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url(images/grass.png);
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
-    body {
-      margin: 0;
-      padding: 0;
-    }
+        .header {
+            text-align: center;
+            font-size: 32px;
+            color: white;
+            padding: 10px;
+        }
 
+        .header h1 {
+            font-family: 'BlackerSansDisplay-Thin';
+        }
 
-    .header {
-      text-align: center;
-      font-size: 32px;
-      color: white;
-      padding: 10px;
-    }
+        .header h2 {
+            font-family: 'MoonTime-Regular';
+            font-size: 80px;
+        }
 
-    .header h1 {
-        font-family: 'BlackerSansDisplay-Thin';
-    }
+        .container {
+            display: flex;
+            gap: 20px;
+            width: 80%;
+            max-width: 900px;
+            justify-content: center;
+        }
 
-    
-    .header h2 {
-        font-family: 'MoonTime-Regular';
-        font-weight: 60;
-        font-size : 80px;
-    }
+        .blur-box {
+            flex: 1;
+            height: 300px;
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-family: 'BlackerSansDisplay-Thin';
+            font-size: 40px;
+            color: white;
+            font-weight: bold;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
 
-    .container {
-        background-image: url(images/grass.png);
-        background-size: cover;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding-top: 130px; /* Add some padding to the top */
-    }
+        .blur-box:first-child {
+            background-color: rgba(56, 186, 131, 0.8);
+        }
 
+        .blur-box:last-child {
+            background-color: rgba(97, 112, 163, 0.8);
+        }
 
-    .container-yt {
-        width: 560px;
-        height: 315px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+        .blur-box:hover {
+            transform: scale(1.05);
+            background-color: rgba(0, 0, 0, 0.6);
+        }
 
-
-    .blur-box {
-      width: flex;
-      backdrop-filter: blur(10px);
-      border-radius: 10px;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .blur-box-inside {
-      width: 100%;
-      font-family: 'BlackerSansDisplay-Thin';
-      background-color: rgba(56, 186, 131, 0.7); /* Semi-transparent background color, rgba(112, 163, 97, 0.7) */
-      padding: 20px;w
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      backdrop-filter: blur(4px); /* Apply the backdrop blur effect */
-    }
-
-    .logo {
+        .logo {
         position: absolute;
         top: 10px;
         left: 10px;
         width: 100px; /* Set the desired width, height will scale proportionally */
-    }
+        }
 
-    .song-info {
-      display: flex;
-      flex-direction: column;
-      margin: 0px
-    }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                width: 90%;
+            }
 
-    .song-info h1,
-    .song-info h2 {
-      margin: 5px 0;
-      text-align: center;
-      color: azure;
-    }
-
-    .song-info p {
-      margin: 0;
-      text-align: center;
-      color: azure;
-      align-items: center;
-    }
-
-    .control-buttons {
-      display: flex;
-      flex-direction: column;
-      margin: 0;
-    }
-
-    .btn {
-      margin-bottom: 10px;
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      background-color: lightgreen;
-      text-align: center;
-      cursor: pointer;
-    }
-
-    .youtube-link a {
-      color: lightgreen;
-      text-decoration: none;
-    }
-
-    .social-link {
-        margin: 0 10px; /* Add margin between the icons */
-        color: aliceblue;
-      }
-
-      .social-link i {
-        font-size: 2.5em; /* Set the font size to increase the size of the icons */
-      }
-
-    .footer h2 {
-      color: aliceblue;
-    }
-
-    @media (max-width: 768px) {
-      /* Adjustments for mobile view */
-      .container {
-        justify-content: flex-start;
-        padding: 20px;
-        background-attachment: scroll;
-      }
-
-      .blur-box {
-        width: 100%;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px;
-      }
-
-      .song-info {
-        margin: 10px 0;
-      }
-
-      .control-buttons {
-        margin: 10px 0;
-      }
-
-      .footer {
-        width: 100%;
-        text-align: center;
-        padding: 30px 0;
-      }
-
-      .footer h2 {
-        margin-bottom: 25px;
-        margin-top: 20px;
-        font-weight: 1000;
-        color: azure;
-        font-family: 'MoonTime-Regular';
-      }
-
-      .footer .i{
-        font-weight: 500; /* Adjust the font size as needed */
-        margin: 0 10px; /* Add margin between the icons if desired */
-        align-items: center;
-        justify-content: center;
-        justify-items: center;
-      }
-    }
-  </style>
+            .blur-box {
+                height: 250px;
+                font-size: 36px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <div class="logo">
-      <img width="200%" height="200%" src="images/logo_nobg.png" alt="">
+    <div class="container">
+        <div class="logo">
+          <img width="200%" height="200%" src="images/logo_nobg.png" alt="">
+        </div>
     </div>
 
-    <div class="blur-box">
-        <div class="header">
-            <h1>SUNDAY MAR 16, 2025</h1>
-            <h1>MORNING SERVICE</h1>
-            <h2>Worship Set List</h2>
+    <div class="container">
+        <div class="blur-box" onclick="window.location.href='morning.html'">
+            MORNING SERVICE
         </div>
-
-        <div class="blur-box-inside">
-          <div class="song-info">
-            <h1>PRESIDING</h1>
-            <h1>ALIVE AGAIN</h1>
-            <h2>Planetshakers</h2>
-                <div class="container-yt">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/XAnAwFfpWVI?si=gK_bd_LvSJtIoGFC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-          </div>
+        <div class="blur-box" onclick="window.location.href='afternoon.html'">
+            AFTERNOON SERVICE
         </div>
-
-        <div class="blur-box-inside">
-            <div class="song-info">
-                <h1>MORNING WATCH</h1>
-                <h1>HERE I AM TO WORSHIP</h1>
-                <h2>Hillsong</h2>
-                    <div class="container-yt">
-                      <iframe width="560" height="315" src="https://www.youtube.com/embed/6CKCThJB5w0?si=gtDLNzsLdJS8trkj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-            </div>
-        </div> 
-
-      <div class="blur-box-inside">
-          <div class="song-info">
-            <h1>BEST DAYS</h1>
-            <h2>Lincoln Brewster</h2>
-            <div class="container-yt">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/ReTbj84S6UA?si=RhHo1C1WFKGen1s0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-          </div>
-        </div> 
-
-           <div class="blur-box-inside">
-          <div class="song-info">
-            <h1>TODAY IS THE DAY</h1>
-            <h2>Lincoln Brewster</h2>
-            <div class="container-yt">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/mGVbFiqAXhY?si=chYhxOns3z3JpSTq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            </div>
-          </div>
-        </div> 
-          
-      <div class="blur-box-inside">
-      <div class="song-info">
-        <h1>THE POWER OF THE CROSS</h1>
-          <h2>Keith and Kristyn Getty</h2>
-        <div class="container-yt">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/6wcULqyoINg?si=pfZnZwr9u78M6oqr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-      </div>
     </div>
-
-    <div class="blur-box-inside">
-      <div class="song-info">
-        <h1>AMAZING LOVE</h1>
-        <h1>WORD OF GOD SPEAK</h1>
-          <h1>Guy Penrod</h1>
-        <div class="container-yt">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SbN_r_6aNq0?si=33Jvbgdwcce0ax8l" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-  </div>
-
-        <div class="blur-box-inside">
-      <div class="song-info">
-        <h1>COMMUNION SONG</h1>
-        <h1>THE COMMUION</h1>
-        <h2>Decibel Worship</h2>
-        <div class="container-yt">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/xj5dPF1YTTI?si=wdZo_3UlMahShnse" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-      </div>
-  </div>
-
-     <div class="blur-box-inside">
-      <div class="song-info">
-        <h1>OFFERING SONG</h1>
-        <h1>JIREH</h1>
-        <h2>Maverick City Worship</h2>
-        <div class="container-yt">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/mC-zw0zCCtg?si=fTUpWAD6CB2KVeA2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-      </div>
-  </div>
-
-<!-- <h1>VICTORY SONG</h1> -->
-        <div class="blur-box-inside">
-          <div class="song-info">
-              <h1>VICTORY SONG</h1>
-            <h1>TODAY IS THE DAY</h1>
-            <h2>Lincoln Brewster</h2>
-            <div class="container-yt">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/mGVbFiqAXhY?si=chYhxOns3z3JpSTq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            </div>
-          </div>
-        </div> 
-          <!-- Footer -->
-          <section class="footer">
-            <h2>Follow us on our pages!</h2>
-            <a href="https://www.facebook.com/mnccdubai" class="social-link"><i class="fa-brands fa-facebook"></i></i></a>
-            <a href="https://www.youtube.com/channel/UC7-IG6l1wsbihL_d3AeKGWA" class="social-link"><i class="fa-brands fa-youtube"></i></i></a>
-            <a href="https://www.instagram.com/mncc.international?igsh=dHA3Z2d3b2c3Y2w2" class="social-link"><i class="fa-brands fa-instagram"></i></i></a>
-          </section>
-        <section class="footer">
-          <h2>Download the songs below</h2>
-          <a href="https://ytmp3.nu" class="social-link"><i class="fa-solid fa-download"></i></a>
-        </section>
-        </div> 
-        
-    </div>
-    </div>
-</body>
-</html>
 
 <!-- 
 
