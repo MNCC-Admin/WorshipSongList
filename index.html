@@ -25,10 +25,10 @@
         }
 
         * {
-            text-align: center;
-            justify-content: center;
-            justify-items: center;
             box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            text-align: center;
         }
 
         body {
@@ -36,10 +36,25 @@
             padding: 0;
             background-image: url(images/grass.png);
             background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
             height: 100vh;
+        }
+
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 100px;
+        }
+
+        .logo img {
+            width: 100%;
+            height: auto;
         }
 
         .container {
@@ -47,18 +62,12 @@
             grid-template-columns: 1fr 1fr;
             gap: 20px;
             width: 80%;
-            max-width: 900px;
-        }
-
-        .logo {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        width: 100px; /* Set the desired width, height will scale proportionally */
+            max-width: 600px;
+            margin-top: 50px;
         }
 
         .blur-box {
-            height: 300px;
+            height: 150px;
             backdrop-filter: blur(10px);
             border-radius: 15px;
             display: flex;
@@ -66,7 +75,7 @@
             justify-content: center;
             cursor: pointer;
             font-family: 'BlackerSansDisplay-Thin';
-            font-size: 40px;
+            font-size: 28px;
             color: white;
             font-weight: bold;
             transition: transform 0.3s ease, background-color 0.3s ease;
@@ -88,20 +97,19 @@
         @media (max-width: 768px) {
             .container {
                 grid-template-columns: 1fr;
+                width: 90%;
             }
 
             .blur-box {
-                height: 250px;
-                font-size: 36px;
+                height: 120px;
+                font-size: 24px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="logo">
-          <img width="200%" height="200%" src="images/logo_nobg.png" alt="">
-        </div>
+    <div class="logo">
+        <img src="images/logo_nobg.png" alt="Logo">
     </div>
 
     <div class="container">
@@ -112,9 +120,9 @@
             AFTERNOON SERVICE
         </div>
     </div>
-
 </body>
 </html>
+
 
 
 <!-- 
