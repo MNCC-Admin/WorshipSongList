@@ -42,32 +42,22 @@
             height: 100vh;
         }
 
-        .header {
-            text-align: center;
-            font-size: 32px;
-            color: white;
-            padding: 10px;
-        }
-
-        .header h1 {
-            font-family: 'BlackerSansDisplay-Thin';
-        }
-
-        .header h2 {
-            font-family: 'MoonTime-Regular';
-            font-size: 80px;
-        }
-
         .container {
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             gap: 20px;
             width: 80%;
             max-width: 900px;
-            justify-content: center;
+        }
+
+        .logo {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 100px; /* Set the desired width, height will scale proportionally */
         }
 
         .blur-box {
-            flex: 1;
             height: 300px;
             backdrop-filter: blur(10px);
             border-radius: 15px;
@@ -95,17 +85,9 @@
             background-color: rgba(0, 0, 0, 0.6);
         }
 
-        .logo {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        width: 100px; /* Set the desired width, height will scale proportionally */
-        }
-
         @media (max-width: 768px) {
             .container {
-                flex-direction: column;
-                width: 90%;
+                grid-template-columns: 1fr;
             }
 
             .blur-box {
@@ -130,6 +112,10 @@
             AFTERNOON SERVICE
         </div>
     </div>
+
+</body>
+</html>
+
 
 <!-- 
 
