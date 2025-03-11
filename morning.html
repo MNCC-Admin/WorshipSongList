@@ -59,18 +59,15 @@
     }
 
     .container {
-    background-image: url(images/grass.png);
-    background-size: cover; /* Ensures the background image covers the entire container */
-    background-position: center center; /* Centers the background image */
-    background-attachment: fixed; /* Ensures the background stays fixed during scrolling */
-    height: 100vh; /* Ensures the container covers the full height of the viewport */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-top: 130px; /* Adjust top padding as needed */
+        background-image: url(images/grass.png);
+        background-size: cover;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 130px; /* Add some padding to the top */
     }
-
 
     .container-yt {
         width: 560px;
@@ -180,10 +177,10 @@
     @media (max-width: 768px) {
       /* Adjustments for mobile view */
       .container {
-        background-attachment: scroll; /* Prevents the background from being fixed on mobile */
-        padding: 20px; /* Adjust padding for mobile */
         justify-content: flex-start;
-    }
+        padding: 20px;
+        background-attachment: scroll;
+      }
 
       .blur-box {
         width: 100%;
